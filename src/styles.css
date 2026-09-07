@@ -175,6 +175,14 @@ html { filter: none; }
 @media (max-width: 800px) { .hero__tool-scene { top: 24%; left: 8%; width: 88vw; height: 48vh; } .hero__machine { top: 3%; left: 13%; width: 64vw; height: 64vw; } }
 @media (max-width: 520px) { .hero__tool-scene { top: 28%; left: 5%; width: 90vw; height: 42vh; } .hero__machine { top: 2%; left: 13%; width: 58vw; height: 58vw; } }
 @media (max-width: 520px) {
+	.hero__content { position: relative; z-index: 4; }
+	.hero__content h1, .hero__content .eyebrow, .hero__content .hero__bottom { position: relative; z-index: 5; }
+	.hero__tool-scene { top: 49%; left: 28%; width: 68vw; height: 34vh; z-index: 2; pointer-events: none; }
+	.hero__machine { top: 0; left: 6%; width: 52vw; height: 52vw; }
+	.hero__tool-scene .ink-bottle { right: -4%; bottom: 6%; width: 12vw; height: 17vw; min-width: 48px; min-height: 70px; }
+	.hero__tool-scene .needle-cartridge { left: -2%; bottom: 4%; width: 18vw; min-width: 70px; }
+}
+@media (max-width: 520px) {
 	body { min-width: 0; overflow-x: hidden; }
 	.site-header { padding: .85rem 5vw; }
 	.brand { max-width: 170px; }
