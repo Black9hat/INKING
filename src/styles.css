@@ -129,7 +129,7 @@ body, .preloader, .hero, .work, .studio, .footer { background: #fff; color: #111
 .hero__orb { background: radial-gradient(circle at 32% 28%, #fff 0, #d4d4d4 18%, #aaa 45%, #f8f8f8 76%); box-shadow: -25px 25px 100px rgba(0,0,0,.12), inset -35px -30px 80px rgba(0,0,0,.12); }
 .hero__rings i { border-color: #777; }
 .site-header, .brand, .nav button, .menu-button, .hero__content, .hero__bottom, .hero__side-note { color: #111; }
-.hero__content h1 { color: #111; } .hero__content h1 em { color: #89847d; }
+.hero__content h1 { color: #111; }
 .brand b, .nav button, .nav__book, .menu-button { color: #111 !important; }
 .brand span { border-color: #111; }
 .eyebrow, .section-heading__note, .hero__side-note, .preloader__footer { color: #666; }
@@ -192,7 +192,7 @@ main { display: flex; flex-direction: column; }
 .ink-section { order: 6; }
 .contact { order: 7; }
 .brand img { width: 44px; height: 44px; }
-.brand b { font-size: .68rem; letter-spacing: .18em; }
+.brand b { font-size: 1.05rem; font-weight: 800; letter-spacing: .22em; transform: scaleX(1.35); transform-origin: left center; }
 .nav { gap: .7rem; }
 .nav button { padding: .65rem 1rem; border: 1px solid #c8c8c8; border-radius: 999px; color: #111 !important; background: rgba(255,255,255,.82); transition: background .25s, border-color .25s, transform .25s; }
 .nav button:hover, .nav__book { border-color: #111 !important; background: #111 !important; color: #fff !important; transform: translateY(-2px); }
@@ -219,7 +219,7 @@ main { display: flex; flex-direction: column; }
 #journal .journey__intro > .eyebrow::after { content: 'Our process'; font-size: .65rem; }
 .customize .eyebrow::after { content: 'Custom tattoos'; font-size: .65rem; }
 /* Keep the hero tool fully inside its own scene instead of clipping at the section edge. */
-.hero__tool-scene { top: 15%; left: 50%; width: min(44vw, 620px); height: 70vh; overflow: visible; }
+.hero__tool-scene { top: 15%; left: 62%; width: min(40vw, 580px); height: 70vh; overflow: visible; }
 .hero__machine { top: 5%; left: 12%; width: min(30vw, 430px); height: min(30vw, 430px); }
 .hero__tool-scene .ink-bottle { display: block; right: 2%; bottom: 12%; }
 .hero__tool-scene .needle-cartridge { display: block; left: 2%; bottom: 9%; }
