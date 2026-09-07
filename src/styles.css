@@ -129,7 +129,7 @@ body, .preloader, .hero, .work, .studio, .footer { background: #fff; color: #111
 .hero__orb { background: radial-gradient(circle at 32% 28%, #fff 0, #d4d4d4 18%, #aaa 45%, #f8f8f8 76%); box-shadow: -25px 25px 100px rgba(0,0,0,.12), inset -35px -30px 80px rgba(0,0,0,.12); }
 .hero__rings i { border-color: #777; }
 .site-header, .brand, .nav button, .menu-button, .hero__content, .hero__bottom, .hero__side-note { color: #111; }
-.hero__content h1 { color: #000000; } .hero__content h1 em { color: #89847d; }
+.hero__content h1 { color: #111; } .hero__content h1 em { color: #89847d; }
 .brand b, .nav button, .nav__book, .menu-button { color: #111 !important; }
 .brand span { border-color: #111; }
 .eyebrow, .section-heading__note, .hero__side-note, .preloader__footer { color: #666; }
