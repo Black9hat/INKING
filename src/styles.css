@@ -177,10 +177,12 @@ html { filter: none; }
 @media (max-width: 520px) {
 	.hero__content { position: relative; z-index: 4; }
 	.hero__content h1, .hero__content .eyebrow, .hero__content .hero__bottom { position: relative; z-index: 5; }
-	.hero__tool-scene { top: 64%; left: 40%; width: 55vw; height: 25vh; z-index: 2; pointer-events: none; }
-	.hero__machine { top: 0; left: 0; width: 43vw; height: 43vw; }
-	.hero__tool-scene .ink-bottle { right: -8%; bottom: 0; width: 11vw; height: 16vw; min-width: 44px; min-height: 64px; }
-	.hero__tool-scene .needle-cartridge { left: -20%; bottom: 0; width: 16vw; min-width: 62px; }
+	.hero__tool-scene { top: auto; right: 0; bottom: 9%; left: auto; width: 58vw; height: 24vh; z-index: 2; pointer-events: none; }
+	.hero__machine { top: 0; left: 4%; width: 42vw; height: 42vw; }
+	.hero__tool-scene .ink-bottle { right: -3%; bottom: 0; width: 10vw; height: 15vw; min-width: 42px; min-height: 60px; }
+	.hero__tool-scene .needle-cartridge { left: -26%; bottom: 0; width: 15vw; min-width: 58px; }
+	.hero__content h1 { max-width: 92%; }
+	.hero__content .hero__bottom { background: rgba(255,255,255,.9); padding: .45rem 0; }
 }
 @media (max-width: 520px) {
 	body { min-width: 0; overflow-x: hidden; }
