@@ -192,8 +192,8 @@ main { display: flex; flex-direction: column; }
 .ink-section { order: 6; }
 .contact { order: 7; }
 .brand img { width: 44px; height: 44px; }
-.brand b { font-size: 1.05rem; font-weight: 800; letter-spacing: .22em; transform: scaleX(1.35); transform-origin: left center; }
-.nav { gap: .7rem; }
+
+.brand b { font-size: 1.05rem; font-weight: 900; letter-spacing: .22em; transform: scaleX(1.35); transform-origin: left center; }.nav { gap: .7rem; }
 .nav button { padding: .65rem 1rem; border: 1px solid #c8c8c8; border-radius: 999px; color: #111 !important; background: rgba(255,255,255,.82); transition: background .25s, border-color .25s, transform .25s; }
 .nav button:hover, .nav__book { border-color: #111 !important; background: #111 !important; color: #fff !important; transform: translateY(-2px); }
 .nav__book, .nav__book svg { color: #111 !important; background: #fff !important; border: 1.5px solid #111 !important; box-shadow: 0 5px 0 #111, 0 10px 22px rgba(0,0,0,.12); font-weight: 800; }
