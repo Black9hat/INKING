@@ -177,10 +177,10 @@ html { filter: none; }
 @media (max-width: 520px) {
 	.hero__content { position: relative; z-index: 4; }
 	.hero__content h1, .hero__content .eyebrow, .hero__content .hero__bottom { position: relative; z-index: 5; }
-	.hero__tool-scene { top: 49%; left: 28%; width: 68vw; height: 34vh; z-index: 2; pointer-events: none; }
-	.hero__machine { top: 0; left: 6%; width: 52vw; height: 52vw; }
-	.hero__tool-scene .ink-bottle { right: -4%; bottom: 6%; width: 12vw; height: 17vw; min-width: 48px; min-height: 70px; }
-	.hero__tool-scene .needle-cartridge { left: -2%; bottom: 4%; width: 18vw; min-width: 70px; }
+	.hero__tool-scene { top: 64%; left: 40%; width: 55vw; height: 25vh; z-index: 2; pointer-events: none; }
+	.hero__machine { top: 0; left: 0; width: 43vw; height: 43vw; }
+	.hero__tool-scene .ink-bottle { right: -8%; bottom: 0; width: 11vw; height: 16vw; min-width: 44px; min-height: 64px; }
+	.hero__tool-scene .needle-cartridge { left: -20%; bottom: 0; width: 16vw; min-width: 62px; }
 }
 @media (max-width: 520px) {
 	body { min-width: 0; overflow-x: hidden; }
