@@ -23,7 +23,7 @@ body { margin: 0; background: #0a0908; overflow-x: hidden; }
 button, input, textarea, select { font: inherit; }
 button, a { color: inherit; }
 button { border: 0; cursor: pointer; }
-img { display: block; width: 100%; object-fit: cover; border-radius: 3px; box-shadow: 0 22px 42px rgba(0,0,0,.4); }
+img { display: block; width: 100%; object-fit: cover; border-radius: 16px; box-shadow: 0 22px 42px rgba(0,0,0,.4); }
 ::selection { background: var(--red-bright); color: var(--paper); }
 
 /* film grain, everywhere */
@@ -172,13 +172,13 @@ h2 { margin-bottom: 2rem; font-family: var(--display); text-transform: uppercase
 .gallery-line { position: relative; display: grid; grid-template-columns: 42px minmax(0, 1fr) 42px; align-items: stretch; gap: .75rem; }
 .gallery-line__track { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
 .gallery-line__track::-webkit-scrollbar { display: none; }
-.gallery-line__track .gallery-card { flex-basis: calc((100% - 4rem) / 5); scroll-snap-align: start; min-height: 20vw; }
+.gallery-line__track .gallery-card { flex-basis: calc((100% - 3rem) / 4); scroll-snap-align: start; min-height: 20vw; }
 .gallery-line__track .gallery-card--tall { min-height: 24vw; }
 .gallery-line__arrow { align-self: center; display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 50%; background: var(--surface); color: var(--paper); transition: .3s; }
 .gallery-line__arrow:hover { border-color: var(--red-bright); background: var(--red-bright); color: var(--paper); }
 .gallery-line__arrow--left svg { transform: rotate(180deg); }
 
-.gallery-card { position: relative; min-height: 28vw; padding: 0; overflow: hidden; text-align: left; background: var(--panel); isolation: isolate; border-radius: 4px; box-shadow: 0 24px 44px rgba(0,0,0,.5); transition: box-shadow .5s, transform .5s; clip-path: polygon(0 0,100% 0,100% 100%,0 100%); }
+.gallery-card { position: relative; min-height: 28vw; padding: 0; overflow: hidden; text-align: left; background: var(--panel); isolation: isolate; border-radius: 20px; box-shadow: 0 24px 44px rgba(0,0,0,.5); transition: box-shadow .5s, transform .5s; }
 .gallery-card--1 { background: radial-gradient(circle at 50% 25%, #2a1414, #171614 62%); }
 .gallery-card--2 { background: radial-gradient(circle at 30% 65%, #1f1c19, #111 65%); }
 .gallery-card--3 { background: radial-gradient(circle at 70% 30%, #241512, #171413 65%); }
