@@ -31,15 +31,12 @@ function App() {
   const [bookingOpen, setBookingOpen] = useState(false);
   const [bookingStep, setBookingStep] = useState(1);
   const [customSlide, setCustomSlide] = useState(0);
-  const [cursor, setCursor] = useState({ x: -100, y: -100, active: false });
   const heroRef = useRef(null);
   const galleryRows = useRef([]);
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 2100);
-    const move = (event) => setCursor({ x: event.clientX, y: event.clientY, active: true });
-    window.addEventListener('mousemove', move);
-    return () => { clearTimeout(timer); window.removeEventListener('mousemove', move); };
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
@@ -113,7 +110,6 @@ function App() {
         <div className="preloader__wordmark">INK KING<span>TATTOOZ</span></div>
         <div className="preloader__footer"><span>INK</span><span>ART</span><span>STORY</span><span>PERMANENT</span></div>
       </div>
-      <div className={`cursor ${cursor.active ? 'cursor--visible' : ''}`} style={{ transform: `translate3d(${cursor.x}px, ${cursor.y}px, 0)` }} />
       <header className="site-header">
         <button className="brand" onClick={() => scrollTo('top')} aria-label="Back to top"><img src="/images/ink-king-logo.png" alt="Ink King Tattooz logo" /><b>INK KING<br />TATTOOZ</b></button>
         <nav className={menuOpen ? 'nav nav--open' : 'nav'}>
@@ -142,7 +138,7 @@ function App() {
 
         <section className="manifesto section-pad scroll-3d"><p className="eyebrow">01 / The studio</p><div className="manifesto__copy"><h2>Not a shop wall.<br /><span>A blank<br /><em>canvas.</em></span></h2><div><p>Ink King Tattooz runs on obsession — obsessive linework, obsessive hygiene, obsessive respect for the skin it lives on. No flash-sheet shortcuts, no templates. Every piece is built from your story and pushed until it's honest.</p><button className="text-link" onClick={() => scrollTo('studio')}>Enter the studio <ArrowUpRight size={16} /></button></div></div></section>
 
-        <section id="work" className="work section-pad scroll-3d"><div className="section-heading"><div><p className="eyebrow">02 / The wall</p><h2>Real ink.<br /><em>No limits.</em></h2></div><p className="section-heading__note">Straight from the chair.<br />Every piece gets its own atmosphere.</p></div><div className="aesthetic-note"><span>WORK / 2024</span><p>We strip away the noise around the image so the line, shadow, and composition can speak first. Explore custom realism, blackwork, fine-line pieces, and cover-ups from the studio.</p><ArrowDownRight size={18} /></div><div className="style-row">{styles.map((style, index) => <button key={style} className={index === 0 ? 'style-row__active' : ''}>{style} <span>0{index + 1}</span></button>)}</div><div className="gallery-lines"><div className="gallery-line"><button className="gallery-line__arrow gallery-line__arrow--left" onClick={() => slideGalleryRow(0, -1)} aria-label="Previous images"><ArrowRight /></button><div className="gallery-line__track" ref={(element) => { galleryRows.current[0] = element; }}>{gallery.map((item, index) => renderGalleryCard(item, index))}</div><button className="gallery-line__arrow gallery-line__arrow--right" onClick={() => slideGalleryRow(0, 1)} aria-label="Next images"><ArrowRight /></button></div></div></section>
+        <section id="work" className="work section-pad scroll-3d"><div className="section-heading"><div><p className="eyebrow">02 / The wall</p><h2>Real ink.<br /><em>No limits.</em></h2></div><p className="section-heading__note">Straight from the chair.<br />Every piece gets its own atmosphere.</p></div><div className="aesthetic-note"><span>WORK / 2024</span><p>We strip away the noise around the image so the line, shadow, and composition can speak first. Explore custom realism, blackwork, fine-line pieces, and cover-ups from the studio.</p><ArrowDownRight size={18} /></div><div className="gallery-lines"><div className="gallery-line"><button className="gallery-line__arrow gallery-line__arrow--left" onClick={() => slideGalleryRow(0, -1)} aria-label="Previous images"><ArrowRight /></button><div className="gallery-line__track" ref={(element) => { galleryRows.current[0] = element; }}>{gallery.map((item, index) => renderGalleryCard(item, index))}</div><button className="gallery-line__arrow gallery-line__arrow--right" onClick={() => slideGalleryRow(0, 1)} aria-label="Next images"><ArrowRight /></button></div></div></section>
 
         <section className="customize section-pad scroll-3d"><div className="customize__copy"><p className="eyebrow">03 / Make it yours</p><h2>Build your<br />own <em>ink.</em></h2><p className="customize__kicker">{customizationSlides[customSlide].kicker}</p><p>{customizationSlides[customSlide].copy}</p><button className="button button--light" onClick={() => setBookingOpen(true)}>Start your design <ArrowUpRight size={17} /></button></div><div className="customize__visual"><div className="customize__image-stack">{customizationSlides.map((slide, index) => <img key={slide.title} className={index === customSlide ? 'customize__image customize__image--active' : 'customize__image'} src={slide.image} alt={`${slide.style} tattoo inspiration`} />)}</div><div className="customize__caption"><span>0{customSlide + 1} / 0{customizationSlides.length}</span><strong>{customizationSlides[customSlide].title}</strong><i>{customizationSlides[customSlide].style}</i></div><div className="customize__dots">{customizationSlides.map((slide, index) => <button key={slide.title} className={index === customSlide ? 'customize__dot customize__dot--active' : 'customize__dot'} onClick={() => setCustomSlide(index)} aria-label={`Show ${slide.title}`} />)}</div></div></section>
 
