@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { ArrowDownRight, ArrowRight, ArrowUpRight, CalendarDays, Check, ExternalLink, MapPin, Menu, Phone, Plus, X } from 'lucide-react';
+import { ArrowDownRight, ArrowRight, ArrowUpRight, CalendarDays, Check, ExternalLink, MapPin, Maximize2, Menu, Phone, X } from 'lucide-react';
 import './styles.css';
 
 const gallery = [
@@ -92,8 +92,8 @@ function App() {
   };
 
   const renderGalleryCard = (item, index) => (
-    <button key={item.title} className={`gallery-card gallery-card--${(index % 3) + 1} ${item.tall ? 'gallery-card--tall' : ''}`} onClick={() => setActiveImage(item)}>
-      <span className="gallery-card__halo" /><img src={item.image} alt={`${item.style} tattoo artwork`} loading="lazy" /><span className="gallery-card__shade" /><span className="gallery-card__meta"><small>0{index + 1} / {item.year}</small><strong>{item.title}</strong><i>{item.style}</i></span><span className="gallery-card__open"><Plus /></span>
+    <button key={item.title} className={`gallery-card gallery-card--${(index % 3) + 1} ${item.tall ? 'gallery-card--tall' : ''}`} onClick={() => setActiveImage(item)} aria-label={`View ${item.title} full screen`}>
+      <span className="gallery-card__halo" /><img src={item.image} alt={`${item.style} tattoo artwork`} loading="lazy" /><span className="gallery-card__shade" /><span className="gallery-card__meta"><small>0{index + 1} / {item.year}</small><strong>{item.title}</strong><i>{item.style}</i></span><span className="gallery-card__open"><Maximize2 /></span>
     </button>
   );
 
