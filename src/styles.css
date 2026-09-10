@@ -283,6 +283,9 @@ h2 { margin-bottom: 2rem; font-family: var(--display); text-transform: uppercase
 
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
 
+/* safety net: force-hide the retired style-filter row even if a stale build still renders it */
+.style-row { display: none !important; }
+
 /* global overflow safety net — decorative absolutely-positioned motifs must never widen the page */
 html, body { max-width: 100%; overflow-x: hidden; }
 .hero, .studio__visual, .customize__visual, .ink-section { max-width: 100vw; }
